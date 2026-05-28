@@ -1,0 +1,37 @@
+<div class="auth-container">
+
+  <div class="auth-card">
+
+    <h1>NammaKuzhu</h1>
+    <p class="subtitle">Login to your account</p>
+
+    <input type="text"
+           id="loginPhone"
+           placeholder="Mobile Number">
+
+    <input type="password"
+           id="loginPassword"
+           placeholder="Password">
+
+    <button onclick="loginUser()">
+      Login
+    </button>
+
+    <p id="loginMessage"></p>
+
+    <p id="forgotPasswordLink"
+       class="hidden link"
+       onclick="loadPage('forgot-password.html')">
+      Forgot Password?
+    </p>
+
+    <p class="bottom-text">
+      Don't have an account?
+      <span onclick="loadPage('register-phone.html')">
+                Register
+            </span>
+    </p>
+
+  </div>
+
+</div>

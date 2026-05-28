@@ -1,0 +1,352 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body{
+    min-height: 100vh;
+    background: #f1f8f4;
+}
+
+/* ================= AUTH ================= */
+
+.auth-container{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.auth-card{
+    width: 90%;
+    max-width: 360px;
+    background: white;
+    padding: 35px;
+    border-radius: 16px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+    text-align: center;
+}
+
+h1{
+    color: #2e7d32;
+    margin-bottom: 8px;
+}
+
+.subtitle{
+    color: #666;
+    margin-bottom: 25px;
+}
+
+input,
+select{
+    width: 100%;
+    padding: 13px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 15px;
+    background: white;
+}
+
+button{
+    width: 100%;
+    padding: 13px;
+    background: #2e7d32;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover{
+    background: #256428;
+}
+
+input[readonly]{
+    background: #f3f3f3;
+    color: #666;
+}
+
+#loginMessage{
+    margin-top: 15px;
+}
+
+.link{
+    margin-top: 15px;
+    color: #2e7d32;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.bottom-text{
+    margin-top: 20px;
+    color: #555;
+}
+
+.bottom-text span{
+    color: #2e7d32;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.hidden{
+    display: none !important;
+}
+
+/* ================= DASHBOARD ================= */
+
+.dashboard-layout{
+    display: flex;
+    min-height: 100vh;
+}
+
+.sidebar{
+    width: 260px;
+    background: white;
+    padding: 25px;
+
+    display: flex;
+    flex-direction: column;
+
+    box-shadow: 2px 0 10px rgba(0,0,0,0.08);
+}
+
+.profile-section{
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.profile-pic{
+    width: 90px;
+    height: 90px;
+
+    margin: auto;
+    margin-bottom: 15px;
+
+    border-radius: 50%;
+
+    overflow: hidden;
+
+    background: #2e7d32;
+}
+
+.profile-pic img{
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+
+    display: block;
+}
+
+.profile-section h3{
+    color: #333;
+}
+
+.edit-profile{
+    margin-top: 8px;
+    color: #2e7d32;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.menu{
+    flex: 1;
+}
+
+.menu-item{
+    padding: 15px;
+    margin-bottom: 10px;
+
+    border-radius: 10px;
+
+    cursor: pointer;
+
+    font-weight: 500;
+
+    transition: 0.3s;
+}
+
+.menu-item:hover{
+    background: #e8f5e9;
+    color: #2e7d32;
+}
+
+.active{
+    background: #2e7d32;
+    color: white;
+}
+
+.logout-btn{
+    margin-top: auto;
+}
+
+.main-content{
+    flex: 1;
+    padding: 40px;
+}
+
+.main-content h1{
+    color: #2e7d32;
+}
+
+/* ================= MODAL ================= */
+
+.modal-overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0,0,0,0.45);
+
+    backdrop-filter: blur(5px);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    z-index: 999;
+}
+
+.profile-modal{
+    width: 90%;
+    max-width: 650px;
+    max-height: 90vh;
+
+    overflow-y: auto;
+
+    background: white;
+
+    padding: 30px;
+
+    border-radius: 18px;
+
+    position: relative;
+}
+
+.close-btn{
+    position: absolute;
+
+    right: 20px;
+    top: 15px;
+
+    font-size: 28px;
+
+    cursor: pointer;
+}
+
+/* ================= PROFILE IMAGE ================= */
+
+.profile-photo-wrapper{
+    width: 130px;
+    height: 130px;
+    margin: 20px auto;
+    position: relative;
+    border-radius: 50%;
+    overflow: visible;
+}
+
+.profile-photo-wrapper img{
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+
+    display: block;
+}
+
+.camera-icon{
+    position: absolute;
+
+    right: 5px;
+    bottom: 5px;
+
+    width: 34px;
+    height: 34px;
+
+    background: white;
+
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    cursor: pointer;
+
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+
+    font-size: 18px;
+}
+
+/* ================= PHOTO OPTIONS ================= */
+
+.photo-options-box{
+    width: 90%;
+    max-width: 360px;
+
+    background: white;
+
+    padding: 30px;
+
+    border-radius: 16px;
+
+    position: relative;
+
+    text-align: center;
+}
+
+.photo-options-box h2{
+    margin-bottom: 20px;
+    color: #2e7d32;
+}
+
+.photo-options-box button{
+    margin-bottom: 12px;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width: 768px){
+
+    .dashboard-layout{
+        flex-direction: column;
+    }
+
+    .sidebar{
+        width: 100%;
+    }
+}
+
+@media(max-width: 480px){
+
+    .auth-card{
+        padding: 25px;
+    }
+
+    h1{
+        font-size: 26px;
+    }
+
+    input,
+    button,
+    select{
+        font-size: 14px;
+        padding: 12px;
+    }
+
+    .profile-modal{
+        padding: 20px;
+    }
+}
